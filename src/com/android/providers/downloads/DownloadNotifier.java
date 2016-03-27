@@ -189,7 +189,8 @@ public class DownloadNotifier {
                         getDownloadIds(cluster));
                 builder.setContentIntent(PendingIntent.getBroadcast(mContext,
                         0, intent, PendingIntent.FLAG_UPDATE_CURRENT));
-                builder.setOngoing(false);
+                builder.setOnlyAlertOnce(true);
+                builder.setOngoing(true);
 
             } else if (type == TYPE_COMPLETE) {
                 final DownloadInfo info = cluster.iterator().next();
