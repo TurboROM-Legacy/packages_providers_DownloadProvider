@@ -357,7 +357,6 @@ public class Helpers {
     static boolean isFilenameValidInExternalPackage(Context context, File file,
             String packageName) {
         try {
-
             if (containsCanonical(buildExternalStorageAppFilesDirs(packageName), file) ||
                     containsCanonical(buildExternalStorageAppObbDirs(packageName), file) ||
                     containsCanonical(buildExternalStorageAppCacheDirs(packageName), file) ||
@@ -379,7 +378,6 @@ public class Helpers {
      */
     static boolean isFilenameValid(Context context, File file, boolean allowInternal) {
         try {
-
             if (allowInternal) {
                 if (containsCanonical(context.getFilesDir(), file)
                         || containsCanonical(context.getCacheDir(), file)
